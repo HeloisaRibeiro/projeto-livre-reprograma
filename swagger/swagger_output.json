@@ -1,0 +1,175 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "REST API",
+    "description": ""
+  },
+  "host": "localhost:1313",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/acessos/add": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "String"
+                },
+                "date": {
+                  "example": "String"
+                },
+                "rg": {
+                  "example": "Number"
+                },
+                "entrace": {
+                  "example": "String"
+                },
+                "departure": {
+                  "example": "String"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/acessos/{rg}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "rg",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "rg",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "rg",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "rg",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/acessos/{date}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "date",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "date",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/acessos/{id}": {
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "date": {
+                  "example": "any"
+                },
+                "rg": {
+                  "example": "any"
+                },
+                "entrace": {
+                  "example": "any"
+                },
+                "departure": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}
