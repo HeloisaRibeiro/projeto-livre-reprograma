@@ -5,7 +5,7 @@
     "title": "REST API",
     "description": ""
   },
-  "host": "localhost:1313",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
     "http"
@@ -22,19 +22,19 @@
               "type": "object",
               "properties": {
                 "name": {
-                  "example": "String"
+                  "example": "any"
                 },
                 "date": {
-                  "example": "String"
+                  "example": "any"
                 },
                 "rg": {
-                  "example": "Number"
+                  "example": "any"
                 },
                 "entrace": {
-                  "example": "String"
+                  "example": "any"
                 },
                 "departure": {
-                  "example": "String"
+                  "example": "any"
                 }
               }
             }
@@ -100,7 +100,7 @@
         }
       }
     },
-    "/acessos/{date}": {
+    "/acessos/date/{date}": {
       "get": {
         "description": "",
         "parameters": [
