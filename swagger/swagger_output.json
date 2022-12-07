@@ -143,19 +143,19 @@
               "type": "object",
               "properties": {
                 "name": {
-                  "example": "any"
+                  "example": "String"
                 },
                 "date": {
-                  "example": "any"
+                  "example": "String"
                 },
                 "rg": {
-                  "example": "any"
+                  "example": "Number"
                 },
                 "entrace": {
-                  "example": "any"
+                  "example": "String"
                 },
                 "departure": {
-                  "example": "any"
+                  "example": "String"
                 }
               }
             }
