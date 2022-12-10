@@ -8,6 +8,7 @@ const addNewVisitor = async (req, res) => {
             rg,
             entrace,
             departure,
+            apartment,
         } = req.body;
         const newVisitor = new acessosModel({
             name,
@@ -15,6 +16,7 @@ const addNewVisitor = async (req, res) => {
             rg,
             entrace,
             departure,
+            apartment,
         });
         const savedVisitor = await newVisitor.save();
 
@@ -34,7 +36,7 @@ const findAcessoByRG = async (req, res) => {
         res.status(500).json({ message: error });
 
     }
-}
+} 
 
 const findByDate = async (req, res) => {
     try {
@@ -66,6 +68,7 @@ const UpdateVisitor = async (req, res) => {
             rg,
             entrace,
             departure,
+            apartment,
         } = req.body;
         const updateVisitors = await acessosModel.findByIdAndUpdate(req.params.id, {
             name,
@@ -73,6 +76,7 @@ const UpdateVisitor = async (req, res) => {
             rg,
             entrace,
             departure,
+            apartment,
         });
         res.status(200).json({ message: "Visitante atualizado com sucesso", updateVisitors });
 

@@ -28,7 +28,13 @@ const acessoSchema = new mongoose.Schema(
             type: String,
             required: true,
 
+        },
+        apartment: {
+            type: String,
+            required: true,
+
         }
+
     }
 
 );
