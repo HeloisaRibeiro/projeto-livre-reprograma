@@ -4,8 +4,7 @@ const router = express.Router();
 
 
 router.post("/add", controller.addNewVisitor);  //adiciona um novo visitante
-router.get("/:rg", controller.findAcessoByRG);  //pesquisa o visitante por rg
-router.get("/date/:date", controller.findByDate);    // pesquisa por data de cadastro
+router.get("/all", controller.findAcessoByRG);  //traz todos os dados da base
 router.delete("/:rg", controller.deleteAcesso); // apaga o primeiro visitante que achar pelo ID
 router.put("/:id", controller.UpdateVisitor); // atualiza o cadastro do visitante 
 

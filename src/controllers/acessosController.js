@@ -27,23 +27,10 @@ const addNewVisitor = async (req, res) => {
     };
 };
 
-
-const findByDate = async (req, res) => {
-    try {
-        const findAcesso = await acessosModel.findOne(req.query.date);
-        res.status(200).json(findAcesso);
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ message: error });
-
-    }
-}
-
 const findAcessoByRG = async (req, res) => {
-
-    
+   const query = req.query.rg
     try {
-        const findAcesso = await acessosModel.find(req.query.rg);
+        const findAcesso = await acessosModel.find(query).lean();
         res.status(200).json(findAcesso);
     } catch (error) {
         console.error(error);
@@ -97,7 +84,6 @@ const UpdateVisitor = async (req, res) => {
 module.exports = {
     addNewVisitor,
     findAcessoByRG,
-    findByDate,
     UpdateVisitor,
     deleteAcesso,
 
