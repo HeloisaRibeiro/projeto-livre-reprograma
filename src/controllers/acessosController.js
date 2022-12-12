@@ -41,7 +41,7 @@ const findAcessoByRG = async (req, res) => {
 
 const deleteAcesso = async (req, res) => {
     try {
-        const deleteAcesso = await acessosModel.findOneAndRemove(req.query.rg);
+        const deleteAcesso = await acessosModel.remo(req.query.rg);
         const message = `Acesso com o nome ${deleteAcesso.name} foi deletado com sucesso`;
         res.status(202).json({ message});
     } catch (error) {
