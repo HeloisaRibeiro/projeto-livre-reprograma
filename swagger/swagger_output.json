@@ -5,7 +5,7 @@
     "title": "REST API",
     "description": ""
   },
-  "host": "localhost:1313",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
     "http"
@@ -36,7 +36,7 @@
                   "example": "String"
                 },
                 "date": {
-                  "example": "2022-12-12"
+                  "example": "2022-12-13"
                 },
                 "rg": {
                   "example": "Number"
@@ -105,7 +105,7 @@
       }
     },
     "/acessos/{id}": {
-      "put": {
+      "patch": {
         "description": "",
         "parameters": [
           {
@@ -133,7 +133,7 @@
                   "example": "2022-12-13"
                 },
                 "departure": {
-                  "example": "2022-12-14"
+                  "example": "2022-12-13"
                 },
                 "apartment": {
                   "example": "81-A"

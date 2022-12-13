@@ -11,16 +11,20 @@ Documentação das rotas no swagger disponível [aqui](https://projeto-livre-rep
 
 ## *Sumário*
 
+- [Contextualização](#contextualização)
 - [Objetivo](#objetivo)
 - [Funcionalidades](#funcionalidades)
 - [Tecnologias, dependências e bibliotecas](#tecnologias-dependências-e-bibliotecas)
 - [Instruções para instalação e contribuições no projeto](#instalação)
 - [Implementações futuras](#implementações-futuras)
 
+## Contextualização
+
+Não é a primeira e nem será a ultima vez que um negro(a) será barrado em algum evento ou até mesmo em sua propria casa(...) “O condomínio onde moro no Leblon é tão seguro que quando chego de madrugada sou barrado...”.
 
 ## Objetivo
 
-O objetivo dessa API é servir como um sistema de cadastros de visitante de um conjunto residencial. 
+O objetivo dessa API é servir como um sistema de cadastros de visitantes de um conjunto residencial. 
 
 ## Funcionalidades
 
