@@ -27,10 +27,9 @@ const addNewVisitor = async (req, res) => {
     };
 };
 
-const findAcessoByRG = async (req, res) => {
-   const query = req.query.rg
+const findAcessoAll = async (req, res) => {
     try {
-        const findAcesso = await acessosModel.find(query).lean();
+        const findAcesso = await acessosModel.find();
         res.status(200).json(findAcesso);
     } catch (error) {
         console.error(error);
@@ -83,7 +82,7 @@ const UpdateVisitor = async (req, res) => {
 
 module.exports = {
     addNewVisitor,
-    findAcessoByRG,
+    findAcessoAll,
     UpdateVisitor,
     deleteAcesso,
 

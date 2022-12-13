@@ -11,6 +11,17 @@
     "http"
   ],
   "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/acessos/add": {
       "post": {
         "description": "",
@@ -25,19 +36,19 @@
                   "example": "String"
                 },
                 "date": {
-                  "example": "Date"
+                  "example": "2022-12-12"
                 },
                 "rg": {
                   "example": "Number"
                 },
                 "entrace": {
-                  "example": "String"
+                  "example": "2022-12-13"
                 },
                 "departure": {
-                  "example": "String"
+                  "example": "2022-12-14"
                 },
                 "apartment": {
-                  "example": "String"
+                  "example": "81-A"
                 }
               }
             }
@@ -53,22 +64,10 @@
         }
       }
     },
-    "/acessos/{rg}": {
+    "/acessos/all": {
       "get": {
         "description": "",
-        "parameters": [
-          {
-            "name": "rg",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "rg",
-            "in": "query",
-            "type": "string"
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
@@ -77,7 +76,9 @@
             "description": "Internal Server Error"
           }
         }
-      },
+      }
+    },
+    "/acessos/{rg}": {
       "delete": {
         "description": "",
         "parameters": [
@@ -96,32 +97,6 @@
         "responses": {
           "202": {
             "description": "Accepted"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/acessos/date/{date}": {
-      "get": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "date",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "date",
-            "in": "query",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
           },
           "500": {
             "description": "Internal Server Error"
@@ -149,19 +124,19 @@
                   "example": "String"
                 },
                 "date": {
-                  "example": "Date"
+                  "example": "2022-12-13"
                 },
                 "rg": {
                   "example": "Number"
                 },
                 "entrace": {
-                  "example": "String"
+                  "example": "2022-12-13"
                 },
                 "departure": {
-                  "example": "String"
+                  "example": "2022-12-14"
                 },
                 "apartment": {
-                  "example": "String"
+                  "example": "81-A"
                 }
               }
             }
